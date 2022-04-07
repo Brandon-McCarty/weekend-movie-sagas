@@ -32,9 +32,12 @@ function* fetchAllMovies() {
 }
 
 function* fetchMovieDetails (action) {
+    let movie = action.payload
     console.log('GETTING DETAILS FOR ', action.payload);
     
-    // const details = yield axios.get('/api/details');
+    let details = yield axios.get(`/api/genre/${movie.id}`);
+    console.log(details.data);
+    yield put({type: 'SET_GENRES', payload: details.data})
 }
 
 // Create sagaMiddleware

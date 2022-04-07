@@ -5,7 +5,7 @@ function MovieItem({movie}) {
     const dispatch = useDispatch();
 
     const getDetails = () => {
-        dispatch({type: 'FETCH_DETAILS', payload: movie.id})
+        dispatch({type: 'FETCH_DETAILS', payload: movie})
         console.log('Get details for', movie.title);
     }
 

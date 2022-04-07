@@ -1,7 +1,15 @@
+import {useSelector} from 'react-redux';
+
 function MovieDetails () {
 
+    const genres = useSelector(store => store.genres)
+
     return (
-        <h1>RETURN DETAILS REDUCER HERE</h1>
+        <ul>
+        {genres.map(genre => {
+            return (<li>{genre.name}</li>)
+        })}
+        </ul>
     )
 }
 
