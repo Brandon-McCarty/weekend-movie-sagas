@@ -9,16 +9,17 @@ function MovieList() {
     const movies = useSelector(store => store.movies);
 
     useEffect(() => {
+        // dispatch to get all movies to display on the DOM
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
     return (
         <main>
-            <h1>MovieList</h1>
+            <h1>Movie List</h1>
             <section className="movies">
                 {movies.map(movie => {
                     return (
-                        <MovieItem 
+                        <MovieItem
                             key={movie.id}
                             movie={movie}
                         />

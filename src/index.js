@@ -14,8 +14,8 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
-    // Fetch the details for the selected movie
-    yield takeEvery('FETCH_DETAILS', fetchMovieDetails)
+    // Fetch the genres for the selected movie
+    yield takeEvery('FETCH_GENRES', fetchMovieGenres)
 }
 
 function* fetchAllMovies() {
@@ -31,7 +31,8 @@ function* fetchAllMovies() {
         
 }
 
-function* fetchMovieDetails (action) {
+// get all genres associated with 
+function* fetchMovieGenres (action) {
     let movie = action.payload
     console.log('GETTING DETAILS FOR ', action.payload);
     
