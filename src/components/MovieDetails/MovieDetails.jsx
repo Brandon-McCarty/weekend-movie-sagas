@@ -44,7 +44,6 @@ function MovieDetails() {
                                     backgroundColor: "#01B0D3",
                                     padding: "9px 18px",
                                     fontSize: "14px",
-                                    mb: "50px"
                                 }}
                                 variant="contained"
                             >Back</Button>
