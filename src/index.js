@@ -16,6 +16,8 @@ function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
     // Fetch the genres for the selected movie
     yield takeEvery('FETCH_GENRES', fetchMovieGenres)
+    // Add a new movie from user input
+    yield takeEvery('ADD_MOVIE', addNewMovie)
 }
 
 function* fetchAllMovies() {
@@ -27,8 +29,7 @@ function* fetchAllMovies() {
 
     } catch {
         console.log('get all error');
-    }
-        
+    }      
 }
 
 // get all genres associated with 
@@ -40,6 +41,14 @@ function* fetchMovieGenres (action) {
     console.log(details.data);
     yield put({type: 'SET_GENRES', payload: details.data});
     yield put({type: 'SET_DETAILS', payload: action.payload});
+}
+
+function* addNewMovie (action) {
+    try {
+        yield axios.post
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 // Create sagaMiddleware
