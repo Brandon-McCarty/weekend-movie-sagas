@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Select, InputLabel, MenuItem, FormControl } from '@material-ui/core'
+import { Select, MenuItem, Box, Button } from '@material-ui/core'
 
 function MovieForm({ setTrigger }) {
 
@@ -85,7 +85,19 @@ function MovieForm({ setTrigger }) {
                     <MenuItem value={12}>Space-Opera</MenuItem>
                     <MenuItem value={13}>Superhero</MenuItem>
                 </Select>
-                <button type="submit">Add Movie</button>
+                <Box p={4}>
+                <Button
+                    onClick={() => setButtonPopup(true)}
+                    style={{
+                        borderRadius: 25,
+                        backgroundColor: "#01B0D3",
+                        padding: "9px 18px",
+                        fontSize: "14px",
+                    }}
+                    type="submit"
+                    variant="contained"
+                >Add Movie</Button>
+            </Box>
             </form>
         </div>
     )
