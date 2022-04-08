@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Select, InputLabel, MenuItem, FormControl } from '@material-ui/core'
 
-function MovieForm({setTrigger}) {
+function MovieForm({ setTrigger }) {
 
+    // Gather user input for new movie to add
     const [newTitle, setNewTitle] = useState('')
     const [newPoster, setNewPoster] = useState('')
     const [newDescription, setNewDescription] = useState('')
@@ -10,6 +12,8 @@ function MovieForm({setTrigger}) {
 
     const dispatch = useDispatch();
 
+
+    // dispatch to post movie to database
     const addNewMovie = (event) => {
         event.preventDefault();
         console.log('NEW MOVIE ADDED')
@@ -53,27 +57,34 @@ function MovieForm({setTrigger}) {
                     onChange={(event) => setNewDescription(event.target.value)}
                 />
                 <br />
-                <select
+                <Select
                     name="genre"
+                    labelId='genre-select-label'
                     id="genre-select"
                     onChange={(event) => setNewGenre(event.target.value)}
+                    displayEmpty
                     defaultValue={''}
+                    value={newGenre}
                 >
-                    <option  disabled value="">--Choose a genre--</option>
-                    <option value="1">Adventure</option>
-                    <option value="2">Animated</option>
-                    <option value="3">Biographical</option>
-                    <option value="4">Comedy</option>
-                    <option value="5">Disaster</option>
-                    <option value="6">Drama</option>
-                    <option value="7">Epic</option>
-                    <option value="8">Fantasy</option>
-                    <option value="9">Musical</option>
-                    <option value="10">Romantic</option>
-                    <option value="11">Science Fiction</option>
-                    <option value="12">Space-Opera</option>
-                    <option value="13">Superhero</option>
-                </select>
+                    <MenuItem
+                        disabled
+                        value=''
+                    >--Choose a genre--
+                    </MenuItem>
+                    <MenuItem value={1}>Adventure</MenuItem>
+                    <MenuItem value={2}>Animated</MenuItem>
+                    <MenuItem value={3}>Biographical</MenuItem>
+                    <MenuItem value={4}>Comedy</MenuItem>
+                    <MenuItem value={5}>Disaster</MenuItem>
+                    <MenuItem value={6}>Drama</MenuItem>
+                    <MenuItem value={7}>Epic</MenuItem>
+                    <MenuItem value={8}>Fantasy</MenuItem>
+                    <MenuItem value={9}>Musical</MenuItem>
+                    <MenuItem value={10}>Romantic</MenuItem>
+                    <MenuItem value={11}>Science Fiction</MenuItem>
+                    <MenuItem value={12}>Space-Opera</MenuItem>
+                    <MenuItem value={13}>Superhero</MenuItem>
+                </Select>
                 <button type="submit">Add Movie</button>
             </form>
         </div>

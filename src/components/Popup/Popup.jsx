@@ -14,7 +14,7 @@ function Popup({ trigger, setTrigger }) {
         />
       </div>
     </div>
-  ) : "";
+  ) : '';
 }
 
 export default Popup;
