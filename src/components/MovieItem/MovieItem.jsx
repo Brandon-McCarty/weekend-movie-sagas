@@ -20,7 +20,12 @@ function MovieItem({ movie }) {
 
     return (
         <Grid item xs={12} s={6} md={3} lg={4}>
-            <Paper onClick={getDetails}>
+            <Paper
+                style={{
+                    borderColor: "#01B0D3",
+                    border: "1px solid #01B0D3"
+                }}
+                onClick={getDetails}>
                 <div key={movie.id} >
                     <h3>{movie.title}</h3>
 

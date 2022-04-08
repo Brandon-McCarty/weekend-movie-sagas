@@ -23,7 +23,8 @@ function MovieDetails() {
         <Container>
         <Card 
         style={{
-            borderColor: "#01B0D3"
+            borderColor: "#01B0D3",
+            border: "4px solid #01B0D3"
         }}
         variant="outlined">
             <div>
