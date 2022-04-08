@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 
+
+
 function MovieItem({ movie }) {
 
     const dispatch = useDispatch();
@@ -21,6 +23,7 @@ function MovieItem({ movie }) {
             <Paper onClick={getDetails}>
                 <div key={movie.id} >
                     <h3>{movie.title}</h3>
+
                     <img src={movie.poster} alt={movie.title} />
                 </div>
             </Paper>

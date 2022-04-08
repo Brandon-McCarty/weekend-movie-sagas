@@ -1,5 +1,8 @@
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Card from '@material-ui/core/Card';
+import { Container } from '@material-ui/core'
+import {Button} from '@material-ui/core'
 
 
 function MovieDetails() {
@@ -17,8 +20,14 @@ function MovieDetails() {
 
     return (
         <>
+        <Container>
+        <Card 
+        style={{
+            borderColor: "#01B0D3"
+        }}
+        variant="outlined">
             <div>
-                <p>{details.title}</p>
+                <h3>{details.title}</h3>
                 <img src={details.poster} />
                 <p>{details.description}</p>
                 <h3>Genre(s)</h3>
@@ -28,8 +37,19 @@ function MovieDetails() {
                         return (<p key={i}>{genre.name}</p>)
                     })}
                 </div>
-                <button onClick={sendHome}>Back</button>
+                <Button 
+                    onClick={sendHome}
+                    style={{
+                        borderRadius: 25,
+                        backgroundColor: "#01B0D3",
+                        padding: "9px 18px",
+                        fontSize: "14px"
+                    }}
+                    variant="contained"
+                >Back</Button>
             </div>
+            </Card>
+            </Container>
         </>
     )
 }
