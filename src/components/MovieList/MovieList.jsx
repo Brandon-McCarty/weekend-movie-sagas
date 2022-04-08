@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 import MovieItem from '../MovieItem/MovieItem';
@@ -10,6 +10,8 @@ function MovieList() {
     const dispatch = useDispatch();
     const movies = useSelector(store => store.movies);
 
+    const [buttonPopup, setButtonPopup] = useState(false);
+
     useEffect(() => {
         // dispatch to get all movies to display on the DOM
         dispatch({ type: 'FETCH_MOVIES' });
@@ -20,6 +22,7 @@ function MovieList() {
             <h1>Movie List</h1>
             <Box pb={4}>
                 <Button
+                    onClick={() => setButtonPopup(true)}
                     style={{
                         borderRadius: 25,
                         backgroundColor: "#01B0D3",
@@ -29,7 +32,12 @@ function MovieList() {
                     variant="contained"
                 >Add Movie</Button>
             </Box>
-            <Popup trigger={true} />
+            <Popup 
+            trigger={buttonPopup} 
+            buttonPopup={buttonPopup}
+            setButtonPopup={setButtonPopup}
+            >
+            </Popup>
             <Container>
                 <Grid container>
                     <section className="movies">
