@@ -24,7 +24,7 @@ function MovieList() {
                 <Button
                     onClick={() => setButtonPopup(true)}
                     style={{
-                        borderRadius: 25,
+                        borderRadius: 10,
                         backgroundColor: "#01B0D3",
                         padding: "9px 18px",
                         fontSize: "14px",

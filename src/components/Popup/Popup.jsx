@@ -1,14 +1,23 @@
 import './Popup.css'
 import MovieForm from '../MovieForm/MovieForm';
+import {Box, Button} from '@material-ui/core';
 
 function Popup({ trigger, setTrigger }) {
   return (trigger) ? (
     <div className="popup">
       <div className="popup-inner">
-        <button
+        <Button
+          variant="contained"
           className="close-button"
           onClick={() => setTrigger(false)}
-        >Close</button>
+          style={{
+            borderRadius: 10,
+            backgroundColor: "#FF6961",
+            padding: "9px 18px",
+            fontSize: "14px",
+            fontColor: "white"
+        }}
+        >Close</Button>
         <MovieForm
           setTrigger={setTrigger}
         />
