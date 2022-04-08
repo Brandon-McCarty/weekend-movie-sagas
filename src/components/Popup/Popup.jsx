@@ -1,4 +1,4 @@
-
+import './Popup.css'
 
 function Popup(props) {
   return (props.trigger) ? (

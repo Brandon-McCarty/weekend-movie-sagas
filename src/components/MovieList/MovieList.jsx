@@ -29,7 +29,7 @@ function MovieList() {
                     variant="contained"
                 >Add Movie</Button>
             </Box>
-            <Popup />
+            <Popup trigger={true} />
             <Container>
                 <Grid container>
                     <section className="movies">
