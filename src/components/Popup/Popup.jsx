@@ -1,10 +1,15 @@
 import './Popup.css'
+import MovieForm from '../MovieForm/MovieForm';
 
-function Popup(props) {
-  return (props.trigger) ? (
+function Popup({trigger, setTrigger}) {
+  return (trigger) ? (
     <div className="popup">
         <div className="popup-inner">
-            <button className="close-button">Close</button>
+            <button 
+            className="close-button"
+            onClick={() => setTrigger(false)}
+            >Close</button>
+            <MovieForm />
         </div>
     </div>
   ) : "";

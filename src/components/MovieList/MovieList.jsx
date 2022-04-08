@@ -34,8 +34,7 @@ function MovieList() {
             </Box>
             <Popup 
             trigger={buttonPopup} 
-            buttonPopup={buttonPopup}
-            setButtonPopup={setButtonPopup}
+            setTrigger={setButtonPopup}
             >
             </Popup>
             <Container>
