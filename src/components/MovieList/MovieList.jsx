@@ -35,8 +35,7 @@ function MovieList() {
             <Popup 
             trigger={buttonPopup} 
             setTrigger={setButtonPopup}
-            >
-            </Popup>
+            />
             <Container>
                 <Grid container>
                     <section className="movies">

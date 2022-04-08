@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-function MovieForm() {
+function MovieForm({setTrigger}) {
 
     const [newTitle, setNewTitle] = useState('')
     const [newPoster, setNewPoster] = useState('')
@@ -12,17 +12,17 @@ function MovieForm() {
 
     const addNewMovie = (event) => {
         event.preventDefault();
-        console.log(newGenre);
         console.log('NEW MOVIE ADDED')
-        // dispatch({
-        //     type: 'ADD_MOVIE',
-        //     payload: {
-        //         title: newTitle,
-        //         poster: newPoster,
-        //         description: newDescription,
-        //         genre_id: newGenre
-        //     }
-        // })
+        dispatch({
+            type: 'ADD_MOVIE',
+            payload: {
+                title: newTitle,
+                poster: newPoster,
+                description: newDescription,
+                genre_id: newGenre
+            }
+        })
+        setTrigger(false);
     }
 
 
@@ -38,7 +38,7 @@ function MovieForm() {
                 />
                 <input
                     type="text"
-                    placeholder="Movie Poster"
+                    placeholder="Poster Link"
                     value={newPoster}
                     onChange={(event) => setNewPoster(event.target.value)}
                 />
@@ -53,12 +53,13 @@ function MovieForm() {
                     onChange={(event) => setNewDescription(event.target.value)}
                 />
                 <br />
-                <select 
-                name="genre" 
-                id="genre-select"
-                onChange={(event) => setNewGenre(event.target.value)}
+                <select
+                    name="genre"
+                    id="genre-select"
+                    onChange={(event) => setNewGenre(event.target.value)}
+                    defaultValue={''}
                 >
-                    <option  selected disabled value="">--Choose a genre--</option>
+                    <option  disabled value="">--Choose a genre--</option>
                     <option value="1">Adventure</option>
                     <option value="2">Animated</option>
                     <option value="3">Biographical</option>
