@@ -1,8 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import Card from '@material-ui/core/Card';
-import { Container } from '@material-ui/core'
-import {Button} from '@material-ui/core'
+import { Button, Box, Container, Card } from '@material-ui/core'
 
 
 function MovieDetails() {
@@ -20,36 +18,39 @@ function MovieDetails() {
 
     return (
         <>
-        <Container>
-        <Card 
-        style={{
-            borderColor: "#01B0D3",
-            border: "4px solid #01B0D3"
-        }}
-        variant="outlined">
-            <div>
-                <h3>{details.title}</h3>
-                <img src={details.poster} />
-                <p>{details.description}</p>
-                <h3>Genre(s)</h3>
-                <div>
-                    {/* Show each genre associated with the selected movie */}
-                    {genres.map((genre, i) => {
-                        return (<p key={i}>{genre.name}</p>)
-                    })}
-                </div>
-                <Button 
-                    onClick={sendHome}
+            <Container>
+                <Card
                     style={{
-                        borderRadius: 25,
-                        backgroundColor: "#01B0D3",
-                        padding: "9px 18px",
-                        fontSize: "14px"
+                        borderColor: "#01B0D3",
+                        border: "4px solid #01B0D3"
                     }}
-                    variant="contained"
-                >Back</Button>
-            </div>
-            </Card>
+                    variant="outlined">
+                    <div>
+                        <h3>{details.title}</h3>
+                        <img src={details.poster} />
+                        <p>{details.description}</p>
+                        <h4>Genre(s)</h4>
+                        <div>
+                            {/* Show each genre associated with the selected movie */}
+                            {genres.map((genre, i) => {
+                                return (<p key={i}>{genre.name}</p>)
+                            })}
+                        </div>
+                        <Box pb={4}>
+                            <Button
+                                onClick={sendHome}
+                                style={{
+                                    borderRadius: 25,
+                                    backgroundColor: "#01B0D3",
+                                    padding: "9px 18px",
+                                    fontSize: "14px",
+                                    mb: "50px"
+                                }}
+                                variant="contained"
+                            >Back</Button>
+                        </Box>
+                    </div>
+                </Card>
             </Container>
         </>
     )
