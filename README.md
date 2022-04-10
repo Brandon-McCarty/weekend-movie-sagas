@@ -8,6 +8,11 @@ _Duration: Weekend Project_
 
 This project allows the storage of movie information. Upon load, a list of database stored movies is rendered on the DOM. Clicking on an individual movie will bring up the details associated with that movie. The project also allows the user to add new movies to the database and fill in the information to appear with the new movie.
 
+### Screenshots
+<img width="1791" alt="Screen Shot 2022-04-10 at 4 38 51 PM" src="https://user-images.githubusercontent.com/96275396/162640991-e43c2b35-63f6-4497-86f8-27438d1c0505.png">
+
+<img width="1790" alt="Screen Shot 2022-04-10 at 4 39 14 PM" src="https://user-images.githubusercontent.com/96275396/162640994-58a5a9f4-b743-47ee-ab70-9228b67602b0.png">
+
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
