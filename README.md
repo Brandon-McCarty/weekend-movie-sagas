@@ -13,6 +13,8 @@ This project allows the storage of movie information. Upon load, a list of datab
 
 <img width="1790" alt="Screen Shot 2022-04-10 at 4 39 14 PM" src="https://user-images.githubusercontent.com/96275396/162640994-58a5a9f4-b743-47ee-ab70-9228b67602b0.png">
 
+<img width="1786" alt="Screen Shot 2022-04-10 at 4 40 40 PM" src="https://user-images.githubusercontent.com/96275396/162641021-9e3b1007-7f5b-479c-8b7b-6c97b198871a.png">
+
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
