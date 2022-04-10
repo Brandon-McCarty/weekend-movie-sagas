@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 import MovieItem from '../MovieItem/MovieItem';
 import Popup from '../Popup/Popup';
+// Material UI
 import { Container, Button, Grid, Box } from '@material-ui/core'
 
 function MovieList() {

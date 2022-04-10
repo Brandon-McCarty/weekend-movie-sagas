@@ -1,6 +1,7 @@
 import './Popup.css'
 import MovieForm from '../MovieForm/MovieForm';
-import {Box, Button} from '@material-ui/core';
+// Material UI
+import {Button} from '@material-ui/core';
 
 function Popup({ trigger, setTrigger }) {
   return (trigger) ? (

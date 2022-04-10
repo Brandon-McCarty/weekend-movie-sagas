@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
+import {Grid, Paper} from '@material-ui/core'
+
 
 
 
@@ -27,7 +27,7 @@ function MovieItem({ movie }) {
                 }}
                 onClick={getDetails}>
                 <div key={movie.id} >
-                    <h3>{movie.title}</h3>
+                    <h2>{movie.title}</h2>
 
                     <img src={movie.poster} alt={movie.title} />
                 </div>

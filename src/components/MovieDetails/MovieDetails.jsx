@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+// Material UI
 import { Button, Box, Container, Card } from '@material-ui/core'
 
 
@@ -26,7 +27,7 @@ function MovieDetails() {
                     }}
                     variant="outlined">
                     <div>
-                        <h3>{details.title}</h3>
+                        <h2>{details.title}</h2>
                         <img src={details.poster} />
                         <p>{details.description}</p>
                         <h4>Genre(s)</h4>

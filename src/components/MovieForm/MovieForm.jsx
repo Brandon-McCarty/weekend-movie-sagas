@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+// Material UI
 import { Select, MenuItem, Box, Button, TextField } from '@material-ui/core'
 
 function MovieForm({ setTrigger }) {
